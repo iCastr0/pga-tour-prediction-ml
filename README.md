@@ -29,6 +29,6 @@ Este proyecto utiliza técnicas de Machine Learning para predecir ganadores de t
 
 ## Autor
 
-[Nicolas Castro](https://github.com/iCastr0)  
+[Nicolas Castro](https://github.com/iCastr0) 
 [Linkedln](https://www.linkedin.com/in/nicol%C3%A1s-castro-palma-324071274/)
-
+[Gmail](nicolas.castro.palma@gmail.com)
