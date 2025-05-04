@@ -24,7 +24,7 @@ Este proyecto utiliza técnicas de Machine Learning para predecir ganadores de t
 ## Cómo correr el modelo
 
 1. Clona este repositorio
-2. Abre `modelo_pga.R` en RStudio
+2. Abre `Prueba_Modelo.R` en RStudio
 3. Ejecuta el script completo
 
 ## Autor
