@@ -1,18 +1,19 @@
-# 1. Cargar librerías necesarias
+# 1. LOADING LIBRARIES
 library(readr)
 library(tidyverse)
 library(caret)
 library(randomForest)
 
-# 2. Cargar el modelo entrenado
+# 2. LOAD MODEL
 rf_model_loaded <- readRDS("modelo_rf_final.rds")
 
-# 3. Cargar el dummy model (si no lo tenés guardado, recrealo)
+# 3. LOAD DUMMY MODEL
 selected_vars <- pga_data %>%
   select(Winner, sg_putt, sg_ott, sg_t2g, sg_total, strokes, course, purse, made_cut, n_rounds, season)
 
 selected_vars_clean <- selected_vars %>% filter(!is.na(Winner)) %>% drop_na()
 
+# Input New Golfer (Play with the numbers as you want)
 nuevo_jugador <- tibble(
   sg_putt = 0.85,
   sg_ott = 0.76,
@@ -28,10 +29,10 @@ nuevo_jugador <- tibble(
 
 dummy_model <- dummyVars(~ ., data = selected_vars_clean %>% select(-Winner))
 
-# Codificar nuevo jugador
+# INSERT NEW GOLFER
 nuevo_jugador_encoded <- predict(dummy_model, newdata = nuevo_jugador) %>% as.data.frame()
 
-# Predicción
+# Prediction
 prob_win <- predict(rf_model_loaded, newdata = nuevo_jugador_encoded, type = "prob")[, "Yes"]
 pred_clase <- predict(rf_model_loaded, newdata = nuevo_jugador_encoded)
 
