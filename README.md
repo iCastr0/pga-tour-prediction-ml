@@ -24,7 +24,7 @@ This project uses Machine Learning techniques to predict winners of PGA Tour tou
 ## How to Run the Model
 
 1. Clone this repository  
-2. Open `modelo_pga.R` in RStudio  
+2. Open `Prueba_Modelo.R` in RStudio  
 3. Run the entire script  
 
 ## Author
