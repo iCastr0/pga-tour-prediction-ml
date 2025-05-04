@@ -28,3 +28,7 @@ This project uses Machine Learning techniques to predict winners of PGA Tour tou
 3. Run the entire script  
 
 ## Author
+
+[Nicolas Castro](https://github.com/iCastr0) 
+[Linkedln](https://www.linkedin.com/in/nicol%C3%A1s-castro-palma-324071274/)
+[Gmail](nicolas.castro.palma@gmail.com)
